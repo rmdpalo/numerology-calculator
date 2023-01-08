@@ -1,11 +1,10 @@
 from numerology import chaldean_numerology_values, destiny_numbers
 import functools
 
-# print(chaldean_numerology_values)
-
 
 def destiny_number_calculator():
-    full_name = input("What is your FULL name?: ")
+    print("Welcome to the Numerology Destiny Number Calculator!\n")
+    full_name = input("Please enter your full name: ")
     split_name = full_name.split()
     letters = []
     # we work our way down to have individual letters in a list
@@ -34,7 +33,6 @@ def destiny_number_calculator():
             break
         # can't split an int, need it to ba a str
         temp = str(final_number)
-        temp_list = temp.split()
         new_final = 0
         for num in temp:
             new_final += int(num)
