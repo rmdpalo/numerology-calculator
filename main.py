@@ -1,12 +1,12 @@
-from numerology import chaldean_numerology_values
+from numerology import chaldean_numerology_values, destiny_numbers
 import functools
 
 # print(chaldean_numerology_values)
 
 
-def name_calculator():
-    name = input("What is your FULL name?: ")
-    split_name = name.split()
+def destiny_number_calculator():
+    full_name = input("What is your FULL name?: ")
+    split_name = full_name.split()
     letters = []
     # we work our way down to have individual letters in a list
     for name in split_name:
@@ -17,28 +17,34 @@ def name_calculator():
     # convert these individual letters into numbers using chaldean numerology values
     for letter in letters:
         value = 0
+        # we check through every key and find which one holds the current letter in our iteration
         for key in list(chaldean_numerology_values.keys()):
             if letter in chaldean_numerology_values[key]:
                 value = key
                 values.append(value)
 
-    # add all values together
-    # check len of final number. Split the digits and sum until len == 1
+    # check len of final number. Split the digits and sum until len == 1 unless it's a master number
+
+    # this functool is similar to JS's Array.reduce()
     final_number = functools.reduce(lambda a, b: a + b, values)
-    # print("before loop", final_number)
+    master_numbers = [11, 22, 33, 44, 55]
     while final_number > 9:
+        # Master numbers are okay, we can skip this part
+        if final_number in master_numbers:
+            break
+        # can't split an int, need it to ba a str
         temp = str(final_number)
         temp_list = temp.split()
         new_final = 0
         for num in temp:
             new_final += int(num)
         final_number = new_final
-        # print("temp", temp)
-        # print("temp list", temp_list)
-        # print("new_final", new_final)
-        # print("final_number", final_number)
 
-    return final_number
+    first_name = full_name.split(" ")[0].capitalize()
+    destiny_number_summary = "\n{}, your destiny number is {}.\n\n{}".format(
+        first_name, final_number, destiny_numbers[final_number])
+
+    return destiny_number_summary
 
 
-print(name_calculator())
+print(destiny_number_calculator())
