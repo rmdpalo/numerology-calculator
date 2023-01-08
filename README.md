@@ -31,12 +31,9 @@ Remember this is just all in good fun :)
 
 ### Obstacles faced
 
-- OS differences
-While working on this project I faced several technical issues. It mainly had to do with the OS that I was working with, in my previous bootcamp years ago and in my work I usually use MacOS. But for this project (and course overall), I wanted to use Windows OS. 
-- Git/Github
-Initial set up of git and my github repo was a bit tedious having to add environment variables to my PATH. But once we got past that most issues I faced were with CLI command differences between the two OS's (i.e. 'li' for mac/linux and 'dir')
-- Python installation
-Mac streamlines the process of installing python by the use of homebrew, but for windows the default install took me to the Microsoft store and installing through there. But doing that my code editor (VS Code) did not recognize my Python installation as an interpreter, I had to uninstall and reinstall through Python's official website and making sure to check the option to add it to PATH during installation.
+- *OS differences* - While working on this project I faced several technical issues. It mainly had to do with the OS that I was working with, in my previous bootcamp years ago and in my work I usually use MacOS. But for this project (and course overall), I wanted to use Windows OS. 
+- *Git/Github* - Initial set up of git and my github repo was a bit tedious having to add environment variables to my PATH. But once we got past that most issues I faced were with CLI command differences between the two OS's (i.e. 'li' for mac/linux and 'dir')
+- *Python installation* - Mac streamlines the process of installing python by the use of homebrew, but for windows the default install took me to the Microsoft store and installing through there. But doing that my code editor (VS Code) did not recognize my Python installation as an interpreter, I had to uninstall and reinstall through Python's official website and making sure to check the option to add it to PATH during installation.
 
 Aside from the obstacles listed above, working in Python and Windows OS is an awesome change of pace and keeps me on my toes.
 
