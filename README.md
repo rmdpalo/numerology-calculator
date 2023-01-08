@@ -1,6 +1,6 @@
-# numerology-calculator
+# Numerology Destiny Number Calculator
 
-I created this as a final project for Codecademy's CS101: Introduction to Programming
+**Try the calculator [here](https://replit.com/@rmdpalo/numerology-calculator?v=1)**
 
 The prerequisites for the project are as follows:
 
